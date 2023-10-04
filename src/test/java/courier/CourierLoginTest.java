@@ -15,12 +15,12 @@ public class CourierLoginTest {
 
     private Courier courier = new Courier();
     private final CourierClient client = new CourierClient();
-    private final CourierGenerator generator = new CourierGenerator();
+    //  private final CourierGenerator generator = new CourierGenerator();
     private String id;
 
     @Before
     public void createCourier() {
-        courier = generator.getRandom();
+        courier = CourierGenerator.getRandom();
         id = null;
     }
 
