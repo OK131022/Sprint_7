@@ -39,7 +39,7 @@ public class CourierLoginTest {
     public void courierAuthorizationWithFailLogin() {
         courier.setLogin(RandomStringUtils.randomAlphabetic(7));
         ValidatableResponse response = client.login(Account.from(courier));
-        response.statusCode(HttpURLConnection.HTTP_NOT_FOUND).assertThat().body("message", equalTo("Учетная запись не найдена"));
+        response.statusCode(HttpURLConnection.HTTP_NOT_FOUND).assertThat().body("message", equalTo("Учетная запись найдена"));
 
     }
     @Test
